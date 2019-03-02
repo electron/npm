@@ -1,10 +1,9 @@
-# @semantic-release/npm
+# @continuous-auth/semantic-release-npm
 
-[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package.
+[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package using [CFA](https://github.com/electron/cfa) for 2FA codes.
 
-[![Build Status](https://github.com/semantic-release/npm/workflows/Test/badge.svg)](https://github.com/semantic-release/npm/actions?query=workflow%3ATest+branch%3Amaster) [![npm latest version](https://img.shields.io/npm/v/@semantic-release/npm/latest.svg)](https://www.npmjs.com/package/@semantic-release/npm)
-[![npm next version](https://img.shields.io/npm/v/@semantic-release/npm/next.svg)](https://www.npmjs.com/package/@semantic-release/npm)
-[![npm beta version](https://img.shields.io/npm/v/@semantic-release/npm/beta.svg)](https://www.npmjs.com/package/@semantic-release/npm)
+[![npm latest version](https://img.shields.io/npm/v/@continuous-auth/semantic-release-npm/latest.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
+[![npm next version](https://img.shields.io/npm/v/@contiuous-auth/semantic-release-npm/next.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
 
 | Step               | Description |
 |--------------------|-------------|
@@ -16,7 +15,7 @@
 ## Install
 
 ```bash
-$ npm install @semantic-release/npm -D
+$ npm install @continuous-auth/semantic-release-npm -D
 ```
 
 ## Usage
@@ -28,7 +27,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/npm",
+    "@continuous-auth/semantic-release-npm",
   ]
 }
 ```
@@ -54,6 +53,8 @@ Both the [token](https://docs.npmjs.com/getting-started/working_with_tokens) and
 | `NPM_PASSWORD`          | Password of the npm user.                                                                                                     |
 | `NPM_EMAIL`             | Email address associated with the npm user                                                                                    |
 | `NPM_CONFIG_USERCONFIG` | Path to non-default .npmrc file                                                                                                 |
+| `CFA_PROJECT_ID`     | Project ID on CFA |
+| `CFA_SECRET`   | Secret configured on CFA for this repository |
 
 Use either `NPM_TOKEN` for token authentication or `NPM_USERNAME`, `NPM_PASSWORD` and `NPM_EMAIL` for legacy authentication
 
@@ -94,7 +95,7 @@ The `npmPublish` and `tarballDir` option can be used to skip the publishing to t
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@semantic-release/npm", {
+    ["@continuous-auth/semantic-release-npm", {
       "npmPublish": false,
       "tarballDir": "dist",
     }],
@@ -112,7 +113,7 @@ When publishing from a sub-directory with the `pkgRoot` option, the `package.jso
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@semantic-release/npm", {
+    ["@continuous-auth/semantic-release-npm", {
       "pkgRoot": "dist",
     }],
     ["@semantic-release/git", {

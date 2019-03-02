@@ -1,10 +1,9 @@
-# @semantic-release/npm
+# @continuous-auth/semantic-release-npm
 
-[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package.
+[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package using [CFA](https://github.com/electron/cfa) for 2FA codes.
 
-[![Build Status](https://github.com/semantic-release/npm/workflows/Test/badge.svg)](https://github.com/semantic-release/npm/actions?query=workflow%3ATest+branch%3Amaster) [![npm latest version](https://img.shields.io/npm/v/@semantic-release/npm/latest.svg)](https://www.npmjs.com/package/@semantic-release/npm)
-[![npm next version](https://img.shields.io/npm/v/@semantic-release/npm/next.svg)](https://www.npmjs.com/package/@semantic-release/npm)
-[![npm beta version](https://img.shields.io/npm/v/@semantic-release/npm/beta.svg)](https://www.npmjs.com/package/@semantic-release/npm)
+[![npm latest version](https://img.shields.io/npm/v/@continuous-auth/semantic-release-npm/latest.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
+[![npm next version](https://img.shields.io/npm/v/@contiuous-auth/semantic-release-npm/next.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
 
 | Step               | Description                                                                                                                      |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,7 +15,7 @@
 ## Install
 
 ```bash
-$ npm install @semantic-release/npm -D
+$ npm install @continuous-auth/semantic-release-npm -D
 ```
 
 ## Usage
@@ -25,7 +24,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 
 ```json
 {
-  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm"]
+  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@continuous-auth/semantic-release-npm"]
 }
 ```
 
@@ -73,6 +72,8 @@ Refer to the [GitHub Actions recipe for npm package provenance](https://semantic
 | Variable    | Description                                                                                                                   |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `NPM_TOKEN` | Npm token created via [npm token create](https://docs.npmjs.com/getting-started/working_with_tokens#how-to-create-new-tokens) |
+| `CFA_PROJECT_ID` | Project ID on CFA |
+| `CFA_SECRET` | Secret configured on CFA for this repository |
 
 ### Options
 
@@ -118,7 +119,7 @@ The `npmPublish` and `tarballDir` option can be used to skip the publishing to t
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/npm",
+      "@continuous-auth/semantic-release-npm",
       {
         "npmPublish": false,
         "tarballDir": "dist"
@@ -142,7 +143,7 @@ When publishing from a sub-directory with the `pkgRoot` option, the `package.jso
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/npm",
+      "@continuous-auth/semantic-release-npm",
       {
         "pkgRoot": "dist"
       }

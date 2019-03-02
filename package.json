@@ -16,7 +16,7 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@continous-auth/client": "^1.0.2",
+    "@continous-auth/client": "^1.0.3",
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^2.0.0",
     "execa": "^1.0.0",

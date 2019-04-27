@@ -1,9 +1,9 @@
-# @continous-auth/semantic-release-npm
+# @continuous-auth/semantic-release-npm
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package using [CFA](https://github.com/electron/cfa) for 2FA codes.
 
-[![npm latest version](https://img.shields.io/npm/v/@continous-auth/semantic-release-npm/latest.svg)](https://www.npmjs.com/package/@continous-auth/semantic-release-npm)
-[![npm next version](https://img.shields.io/npm/v/@continous-auth/semantic-release-npm/next.svg)](https://www.npmjs.com/package/@continous-auth/semantic-release-npm)
+[![npm latest version](https://img.shields.io/npm/v/@continuous-auth/semantic-release-npm/latest.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
+[![npm next version](https://img.shields.io/npm/v/@contiuous-auth/semantic-release-npm/next.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
 
 | Step               | Description                                                                                                                                   |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@
 ## Install
 
 ```bash
-$ npm install @continous-auth/semantic-release-npm -D
+$ npm install @continuous-auth/semantic-release-npm -D
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@continous-auth/semantic-release-npm",
+    "@continuous-auth/semantic-release-npm",
   ]
 }
 ```
@@ -89,7 +89,7 @@ The `npmPublish` and `tarballDir` option can be used to skip the publishing to t
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@continous-auth/semantic-release-npm", {
+    ["@continuous-auth/semantic-release-npm", {
       "npmPublish": false,
       "tarballDir": "dist",
     }],
@@ -107,7 +107,7 @@ When publishing from a sub-directory with the `pkgRoot` option, the `package.jso
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@continous-auth/semantic-release-npm", {
+    ["@continuous-auth/semantic-release-npm", {
       "pkgRoot": "dist",
     }],
     ["@semantic-release/git", {

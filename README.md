@@ -49,7 +49,7 @@ Both the [token](https://docs.npmjs.com/getting-started/working_with_tokens) and
 | `NPM_USERNAME` | Npm username created via [npm adduser](https://docs.npmjs.com/cli/adduser) or on [npmjs.com](https://www.npmjs.com)           |
 | `NPM_PASSWORD` | Password of the npm user.                                                                                                     |
 | `NPM_EMAIL`    | Email address associated with the npm user                                                                                    |
-| `CFA_HOST`     | Host for CFA |
+| `CFA_PROJECT_ID`     | Project ID on CFA |
 | `CFA_SECRET`   | Secret configured on CFA for this repository |
 
 Use either `NPM_TOKEN` for token authentication or `NPM_USERNAME`, `NPM_PASSWORD` and `NPM_EMAIL` for legacy authentication

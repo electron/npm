@@ -1,7 +1,7 @@
 {
   "name": "@continuous-auth/semantic-release-npm",
   "description": "semantic-release plugin to publish a npm package",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": "Pierre Vanduynslager (https://twitter.com/@pvdlg_)",
   "bugs": {
     "url": "https://github.com/semantic-release/npm/issues"
@@ -16,7 +16,7 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@continuous-auth/client": "^1.0.3",
+    "@continuous-auth/client": "^1.1.0",
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^2.0.0",
     "execa": "^1.0.0",

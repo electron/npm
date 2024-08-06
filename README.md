@@ -1,6 +1,6 @@
 # @continuous-auth/semantic-release-npm
 
-[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package using [CFA](https://github.com/electron/cfa) for 2FA codes.
+[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package using [CFA](https://github.com/continuousauth/web) for 2FA codes.
 
 [![npm latest version](https://img.shields.io/npm/v/@continuous-auth/semantic-release-npm/latest.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
 [![npm next version](https://img.shields.io/npm/v/@contiuous-auth/semantic-release-npm/next.svg)](https://www.npmjs.com/package/@continuous-auth/semantic-release-npm)
